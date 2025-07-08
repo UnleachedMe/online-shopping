@@ -29,6 +29,7 @@
 
 <script>
 	window.menu = '${title}'
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
@@ -36,12 +37,15 @@
 <!-- Boostrap readable theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
+<!-- Boostrap DataTables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <link href="${css}/myapp.css" rel="stylesheet">
 
 </head>
 
 <body>
+
 	<div class="wrapper">
 
 		<%@include file="./shared/navbar.jsp"%>
@@ -67,6 +71,11 @@
 			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
+			
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+			
 		</div>
 
 		<!-- Footer -->
@@ -77,11 +86,19 @@
 
 		<!-- Bootstrap core javascript !-->
 		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- Datatable plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+
+		<!-- Datatable bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
 
 		<!-- Self coded javascript-->
 		<script src="${js}/myapp.js"></script>
 		
 	</div>
+	
+	<script src="${pageContext.request.contextPath}/resources/js/myapp.js?v=1"></script>
 </body>
 
 </html>
