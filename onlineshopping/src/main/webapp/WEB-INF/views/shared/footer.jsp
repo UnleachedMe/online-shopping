@@ -1,11 +1,9 @@
-<div class="footer container">
-		<hr>
-
+<div class="footer">
 		<!-- Footer !-->
 		<footer>
-			<div class="row">
+			<div class="container">
 				<div class="col-lg-12">
-					<p>copyright &copy; Your Website 2014</p>
+					<p>copyright &copy; Online Shopping 2025</p>
 				</div>
 			</div>
 		</footer>

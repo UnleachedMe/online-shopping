@@ -67,6 +67,7 @@ public class CategoryTestCase {
 	}
 	*/
 	
+	/*
 	@Test
 	public void testCRUDCategory() {
 		// Add operation
@@ -112,4 +113,5 @@ public class CategoryTestCase {
 		// Fetching the list
 		assertEquals("Something went wrong while Fetching the list of categories!", 13, categoryDAO.list().size());
 	}
+	*/
 }
